@@ -1,0 +1,208 @@
+String functionC() {
+    return "Hello World"
+}
+
+public static int func(){
+    int n = 10; 
+    return n; 
+}
+
+def cl = {a, b ->
+    println (a)
+    println (b)
+}
+
+void show(int num){
+  println (num)
+}
+
+class RandomVal {
+    private def value
+    private Random randomGen = new Random()
+    
+    def next() {
+        this.value = randomGen.nextInt()
+    }
+    
+    RandomVal() {
+        this.value = randomGen.nextInt()
+    }
+    
+    def String toString() {
+        println"${this.value}"
+    }
+}
+
+class helpMe {
+  int num
+  String str
+  helpMe(){
+    num=18
+    str="bye-bye"
+  } 
+  void displayInfo(){
+       printf("Num: %d \tInfo: %s\n", num, str);
+  }
+};
+
+println (1.class)
+int a = 10
+println (a.class)
+
+javaString = 'java'
+groovyString = "groovy"
+
+b = "b"
+println(b + "123")
+b="b"
+println(b * 5)
+
+l = [1, 3, 5, 12, 7, 6]
+for(int i : l){
+    println(i);
+}
+println(l[1..4]);
+println(l[1..-1])
+println(l[-1..0])
+println(l[1, 3, 5])
+b = 1..5
+println(l[b])
+
+m = [1: true, 0: false]
+for(def i : m){
+    println(i);
+}
+
+for (i in 0..9) { 
+    print (i); 
+}
+
+println(functionC());
+cl(10,14);
+
+1.upto 10, { 
+    print (it+' ')
+}
+println();
+10.times { 
+    print (it+' ')
+}
+
+'qwerty'.each {
+    print (it)
+}
+println();
+('a'..'z').each {
+    print (it + ' ')
+}
+println();
+('a'..'z').findAll { el ->
+    el in ['e', 'y', 'u', 'i', 'o', 'a']
+}.each {
+    print (it + ' ')
+}
+println();
+(0..10).collect { el ->
+    el * 10
+}.each {
+    print (it + ' ')
+}
+println();
+def pw = new File('textfile.txt').newPrintWriter()
+pw.println("new line")
+
+def smth = a ?: "smth"
+def sizes = ['string', 'long string']*.size()
+println (sizes)
+
+
+def r = new RandomVal()
+println(r)
+r++
+println(r)
+
+
+/*Массивы, 
+коллекции, 
+списки*/
+
+b = [2, 10, 5,'Str"ing', "Str'ing", 'Str"ing']
+for (int i = 0; i < b.size(); i++) {
+    println ("b[i] = ${b[i]}")
+}
+
+println(func())
+println(b  .  getClass().getCanonicalName())
+
+// Добавляем элемент в конец массива
+b.add("Элемент в конец")
+for (int i = 0; i < b.size(); i++) {
+    println ("b[i] = ${b[i]}")
+}
+b += "Ещё один элемент"
+println(b)
+
+s = [1, 2, 10, 5, 7]
+s.sort()
+println(s)
+
+if (2 in s) {
+    println("2 есть в " + s)
+}
+
+dict = ["Hi": "Привет", "Yes": "Да", 3: 100]
+println(dict["Hi"])
+println(dict.getClass().getCanonicalName())
+
+int num = 20;
+while(num < 200) {
+  if (num % 5 == 0){
+    print(num+' ')
+  }
+  num++
+}
+println();
+ch = "a"
+do {
+    print(ch+' ');
+    ch++;
+} while (ch<='k')
+
+num = 20
+switch (num) {
+  case 3:
+    break;
+  case 10:
+    break;
+  case 20:
+    println ('ok');
+    break;
+  default:
+    break;
+}
+
+helpMe ok = new helpMe()
+
+boolean me = false
+ok.displayInfo()
+
+num = 10
+show(num)
+for (int i = 0; i<10; i++) {
+  ++num
+  show(num)
+}
+if (true)
+    println('true');
+
+float kitty = 6.5, marko = 7.7
+int test = 35
+boolean check = true;
+
+test+=10; test-=10; test%=10; test*=10; test/=10;
+test>>2; test<<2; test>>>2;
+
+if (check && test<10 || !check) 
+    check = false
+else 
+    check = true;

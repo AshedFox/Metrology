@@ -1,0 +1,114 @@
+String functionC() {
+    return "Hello World"
+}
+
+public static int func(){
+    int n = 10; 
+    return n; 
+}
+
+def cl = {a, b ->
+    println (a)
+    println (b)
+}
+
+class RandomVal {
+    private def value
+    private Random randomGen = new Random()
+    
+    def next() {
+        this.value = randomGen.nextInt()
+    }
+    
+    RandomVal() {
+        this.value = randomGen.nextInt()
+    }
+}
+
+int a = 10
+println (a.class)
+
+javaString = 'java'
+groovyString = "groovy"
+
+l = [1, 3, 5, 12, 7, 6]
+for(int i : l){
+    println(i);
+}
+println(l[1..4]);
+println(l[1..-1])
+println(l[-1..0])
+def b = 1..5
+println(l[b])
+
+m = [1: true, 0: false]
+for(def i : m){
+    println(i);
+}
+
+println(functionC());
+cl(10,14);
+
+1.upto 10, { 
+    print (it+' ')
+}
+'qwerty'.each {
+    print (it)
+}
+println();
+('a'..'z').findAll { el ->
+    el in ['e', 'y', 'u', 'i', 'o', 'a']
+}.each {
+    print (it + ' ')
+}
+
+def smth = a ?: "smth"
+def sizes = ['string', 'long string']*.size()
+
+/*Массивы, 
+коллекции, 
+списки*/
+
+b = [2, 10, 5,'Str"ing', "Str'ing", 'Str"ing']
+for (int i = 0; i < b.size(); i++) {
+    println ("b[i] = ${b[i]}")
+}
+
+println(func())
+println(b.getClass().getCanonicalName())
+
+// Добавляем элемент в конец массива
+b.add("Элемент в конец")
+
+dict = ["Hi": "Привет", "Yes": "Да", 3: 100]
+println(dict["Hi"])
+println(dict.getClass().getCanonicalName())
+
+int num = 20;
+while(num < 200) {
+  if (num % 5 == 0){
+    print(num+' ')
+  }
+  num++
+}
+num = 20
+switch (num) {
+  case 10:
+    break;
+  case 20:
+    println ('ok');
+    break;
+  default:
+    break;
+}
+
+int test = 35
+boolean check = true;
+
+test+=10;
+test-=10;
+test%=10;
+test*=10;
+test/=10;
+test>>2; test<<2;
+test>>>2;

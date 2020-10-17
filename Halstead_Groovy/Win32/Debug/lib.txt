@@ -1,0 +1,17 @@
+String
+GString
+boolean
+byte
+short
+int
+long
+double
+float
+char
+Character
+Byte
+Short
+Integer
+Enum
+def
+void

@@ -1,0 +1,8 @@
+in
+return
+new
+break
+switch
+as
+assert
+instanceof
